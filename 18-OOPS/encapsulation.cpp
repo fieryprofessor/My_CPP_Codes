@@ -2,10 +2,10 @@
 using namespace std;
 
 class ABC {
-    int x;
+    int x;     // we cannot access x
     public: 
 
-    void set(int n){
+    void set(int n){    // but we can access functions set and get
         x=n;
     }
 
