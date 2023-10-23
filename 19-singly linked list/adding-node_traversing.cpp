@@ -1,4 +1,4 @@
-/*adding a node to start of the linked list and traversing the list*/
+/*adding a node to start and end of the linked list and traversing the list*/
 #include<iostream>
 using namespace std;
 
@@ -19,6 +19,16 @@ new_node->next = head;
 head = new_node;
 }
 
+void insertAtTail(Node* &head,int val){
+Node* new_node = new Node(val);
+
+Node* temp=head;
+while(temp->next!=NULL){
+    temp=temp->next;
+}
+temp->next=new_node;
+}
+
 void display(Node* head){
     Node* temp =head;
     while(temp!=NULL){
@@ -33,7 +43,12 @@ int main()
     Node* head =NULL;
 insertAtHead(head,2);
 display(head);
+
 insertAtHead(head,1);
 display(head);
+
+insertAtTail(head,3);
+display(head);
+
     return 0;
 }
