@@ -69,9 +69,10 @@ int getTop(){
 void display(){
     Node*temp=head;
     while(temp!=NULL){
-        cout<<temp->val<<endl;
+        cout<<temp->val<<"->";
         temp=temp->next;
     }
+    cout << "null" << endl;
 }
 
 };
